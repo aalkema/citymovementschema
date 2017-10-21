@@ -20,7 +20,7 @@ class Organization extends AbstractMigration
               ->addColumn('StatusId', 'integer', ['null' => true])
               ->addColumn('Notes', 'text', ['null' => true])
               ->addColumn('ParentOrganizationId', 'integer', ['null' => true])
-              ->addColumn('RegisteredDate','DateTime', ['null' => true])
+              ->addColumn('RegisteredDate','datetime', ['null' => true])
               ->addColumn('Address','string', ['limit' => 1000, 'null' => true, 'default' => null])
               ->addColumn('City','string', ['limit' => 100, 'null' => true, 'default' => null])
               ->addColumn('Province','string', ['limit' => 100, 'null' => true, 'default' => null])
