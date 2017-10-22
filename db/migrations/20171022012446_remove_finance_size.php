@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class MyNewMigration extends AbstractMigration
+class RemoveFinanceSize extends AbstractMigration
 {
     /**
      * Migrate Up.
@@ -10,6 +10,7 @@ class MyNewMigration extends AbstractMigration
     public function up()
     {
         $table = $this->table('organization');
+        $table->dropForeignKey('FinancialSizeId');
         $table->removeColumn('FinancialSizeId')
             ->save();
 
