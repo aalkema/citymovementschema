@@ -29,11 +29,9 @@ class UpdateTables extends AbstractMigration
               ->addColumn('ImageUrl','string',['limit' => 256, 'null' => true, 'default' => null])
               // Foreign Keys below
               ->AddForeignKey('CRACategoryId', 'category', ['constraint' => 'CRACategoryId'])
-              ->AddForeignKey('FinancialSizeId', 'financial_size', ['constraint' => 'FinancialSizeId'])
               ->AddForeignKey('FaithId', 'faith', ['constraint' => 'FaithId'])
               ->AddForeignKey('StatusId', 'status', ['constraint' => 'StatusId'])
               ->AddForeignKey('CRACategoryId', 'category', ['constraint' => 'CRACategoryId'])
-              ->AddForeignKey('ParentOrganizationId', 'organization', ['contraint' => 'OrganizationId'])
               ->save();
     }
 
